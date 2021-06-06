@@ -1,4 +1,3 @@
-
 const welcomeImg = "../images/illustration-section-01.svg";
 const shareUrlImg = "../images/illustration-section-01.svg";
 const leaveRoomImg = "../images/illustration-section-01.svg";
@@ -17,7 +16,6 @@ const notifyRecStop = "../audio/recStop.mp3";
 const notifyRaiseHand = "../audio/raiseHand.mp3";
 const notifyError = "../audio/error.mp3";
 const fileSharingInput = "*"; // allow all file extensions
-// "image/*,.mp3,.doc,.docs,.txt,.pdf,.xls,.xlsx,.csv,.pcap,.xml,.json,.md,.html,.js,.css,.php,.py,.sh,.zip,.rar,.tar"; // "*"
 const isWebRTCSupported = DetectRTC.isWebRTCSupported;
 const isMobileDevice = DetectRTC.isMobileDevice;
 
@@ -771,7 +769,7 @@ function initPeer() {
         remoteMedia.mediaGroup = "remotevideo";
         remoteMedia.autoplay = true;
         isMobileDevice
-          ? (remoteMediaControls = false)
+          ? (remoteMediaControls = true)
           : (remoteMediaControls = remoteMediaControls);
         remoteMedia.controls = remoteMediaControls;
         peerMediaElements[peer_id] = remoteMedia;
